@@ -1,0 +1,13 @@
+name: Pani's first workflow
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Hello Moto
+        run: echo "Hello!!!! from ${{ github.workflow }} triggered by the ${{ github.event_name }} done by ${{ github.actor }}"
